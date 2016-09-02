@@ -13,13 +13,10 @@ extension Request {
     func responseObject<T: Mappable>(completionHandler: Response<T, RTError> -> Void) -> Self {
         
         let responseSerializer = ResponseSerializer<T, RTError> { request, response, data, error in
-            guard error == nil  else {
-                return .Failure(RTError(request: .Unknown(error: error)))
-            }
+            guard error == nil else { return .Failure(RTError(request: .Unknown(error: error)))}
             
             let JSONResponseSerializer = Request.JSONResponseSerializer(options: .AllowFragments)
             let result = JSONResponseSerializer.serializeResponse(request, response, data, error)
-            
             
             switch result {
             case .Success(let value):

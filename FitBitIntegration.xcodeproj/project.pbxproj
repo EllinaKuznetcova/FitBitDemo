@@ -10,6 +10,7 @@
 		0C2390DA558B70DAAAF1A9E6 /* Pods_FitBitIntegration.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = 5634CB6D707907F896B384D4 /* Pods_FitBitIntegration.framework */; };
 		DC7905CF1D7831BE00E7F114 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7905CE1D7831BE00E7F114 /* User.swift */; };
 		DC7905D11D78339400E7F114 /* Constants.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7905D01D78339400E7F114 /* Constants.swift */; };
+		DC7905D31D7887D400E7F114 /* Steps.swift in Sources */ = {isa = PBXBuildFile; fileRef = DC7905D21D7887D400E7F114 /* Steps.swift */; };
 		DCCA51981D77365100B42736 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51971D77365100B42736 /* AppDelegate.swift */; };
 		DCCA519A1D77365100B42736 /* ViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51991D77365100B42736 /* ViewController.swift */; };
 		DCCA519D1D77365100B42736 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = DCCA519B1D77365100B42736 /* Main.storyboard */; };
@@ -19,7 +20,7 @@
 		DCCA51AF1D773ED000B42736 /* RTErrorsDescription.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51AE1D773ED000B42736 /* RTErrorsDescription.swift */; };
 		DCCA51B11D773F9500B42736 /* AlamofireHelpers.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51B01D773F9500B42736 /* AlamofireHelpers.swift */; };
 		DCCA51B31D7740B800B42736 /* Router.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51B21D7740B800B42736 /* Router.swift */; };
-		DCCA51B51D7741C400B42736 /* RTAuth.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51B41D7741C400B42736 /* RTAuth.swift */; };
+		DCCA51B51D7741C400B42736 /* RTSteps.swift in Sources */ = {isa = PBXBuildFile; fileRef = DCCA51B41D7741C400B42736 /* RTSteps.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -28,6 +29,7 @@
 		DB81405D46EA03AA8A62769C /* Pods-FitBitIntegration.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-FitBitIntegration.release.xcconfig"; path = "Pods/Target Support Files/Pods-FitBitIntegration/Pods-FitBitIntegration.release.xcconfig"; sourceTree = "<group>"; };
 		DC7905CE1D7831BE00E7F114 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
 		DC7905D01D78339400E7F114 /* Constants.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Constants.swift; sourceTree = "<group>"; };
+		DC7905D21D7887D400E7F114 /* Steps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Steps.swift; sourceTree = "<group>"; };
 		DCCA51941D77365100B42736 /* FitBitIntegration.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = FitBitIntegration.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		DCCA51971D77365100B42736 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		DCCA51991D77365100B42736 /* ViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ViewController.swift; sourceTree = "<group>"; };
@@ -40,7 +42,7 @@
 		DCCA51AE1D773ED000B42736 /* RTErrorsDescription.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTErrorsDescription.swift; sourceTree = "<group>"; };
 		DCCA51B01D773F9500B42736 /* AlamofireHelpers.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AlamofireHelpers.swift; sourceTree = "<group>"; };
 		DCCA51B21D7740B800B42736 /* Router.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Router.swift; sourceTree = "<group>"; };
-		DCCA51B41D7741C400B42736 /* RTAuth.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTAuth.swift; sourceTree = "<group>"; };
+		DCCA51B41D7741C400B42736 /* RTSteps.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = RTSteps.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -67,6 +69,7 @@
 			isa = PBXGroup;
 			children = (
 				DC7905CE1D7831BE00E7F114 /* User.swift */,
+				DC7905D21D7887D400E7F114 /* Steps.swift */,
 			);
 			name = Database;
 			sourceTree = "<group>";
@@ -111,7 +114,7 @@
 			children = (
 				DCCA51B01D773F9500B42736 /* AlamofireHelpers.swift */,
 				DCCA51B21D7740B800B42736 /* Router.swift */,
-				DCCA51B41D7741C400B42736 /* RTAuth.swift */,
+				DCCA51B41D7741C400B42736 /* RTSteps.swift */,
 				DCCA51AB1D773D9B00B42736 /* Errors */,
 			);
 			name = API;
@@ -259,7 +262,8 @@
 			buildActionMask = 2147483647;
 			files = (
 				DCCA519A1D77365100B42736 /* ViewController.swift in Sources */,
-				DCCA51B51D7741C400B42736 /* RTAuth.swift in Sources */,
+				DC7905D31D7887D400E7F114 /* Steps.swift in Sources */,
+				DCCA51B51D7741C400B42736 /* RTSteps.swift in Sources */,
 				DCCA51B11D773F9500B42736 /* AlamofireHelpers.swift in Sources */,
 				DCCA51AD1D773E3E00B42736 /* RTErrors.swift in Sources */,
 				DC7905CF1D7831BE00E7F114 /* User.swift in Sources */,

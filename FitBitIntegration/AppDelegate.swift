@@ -44,9 +44,6 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
     
     func application(application: UIApplication, openURL url: NSURL, sourceApplication: String?, annotation: AnyObject) -> Bool {
         
-        //source URL:
-        Logger.debug(url.absoluteString)
-        
         guard let urlFragment = url.fragment,
             let startRange = urlFragment.rangeOfString("="),
             let endRange = urlFragment.rangeOfString("&") else {return true}
@@ -58,6 +55,7 @@ class AppDelegate: UIResponder, UIApplicationDelegate {
             try realm.write({
                 realm.delete(realm.objects(User))
                 realm.add(user)
+                Logger.debug(user.fitbitToken)
             })
             
             guard let window = application.windows.first else {return true}

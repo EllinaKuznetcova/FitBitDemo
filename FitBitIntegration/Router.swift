@@ -9,8 +9,16 @@
 import Foundation
 
 enum Router {
-    static let BaseURL = "https://b-designworks.herokuapp.com/v1"
-    static var OAuthToken: String?
+    static let BaseURL = "https://api.fitbit.com/1"
+    static var OAuthToken: String? {
+        do {
+            let realm = try Realm()
+            return realm.objects(User).first?.fitbitToken
+        }
+        catch {
+            return nil
+        }
+    }
 }
 
 protocol RouterProtocol: URLRequestConvertible {
@@ -27,10 +35,10 @@ extension RouterProtocol {
         let mutableURLRequest = NSMutableURLRequest(URL: URL.URLByAppendingPathComponent(self.path))
         mutableURLRequest.HTTPMethod = self.settings.method.rawValue
         
-        //        if let token = Router.OAuthToken {
-        //            mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
-        //        }
-        
+        if let token = Router.OAuthToken {
+            mutableURLRequest.setValue("Bearer \(token)", forHTTPHeaderField: "Authorization")
+        }
+
         return self.settings.encoding.encode(mutableURLRequest, parameters: parameters).0
     }
     
